@@ -91,7 +91,7 @@ def read_root():
 def read_root():
     return {"opcion": "Estas jugando"}
 
-@app.get("/pedircartas")
+@app.get("/api/py/pedircartas")
 def read_root(request: Request):
       # Obtener la IP del cliente
     client_ip = request.client.host
@@ -111,7 +111,7 @@ def read_root(request: Request):
     # Retornar las cartas del jugador
     return {"ip": client_ip, "cartas": jugadores[client_ip]}
 
-@app.get("/posicion")
+@app.get("/api/py/posicion")
 async def read_root(request: Request):
     numero_aleatorio = random.randint(1, 8)
     return {
@@ -149,7 +149,7 @@ print(jugador1)
 print(jugador2)
 print(cartas_barajadas) """
 
-@app.get("/cartas-barajadas")
+@app.get("/api/py/cartas-barajadas")
 def read_root():
     return {"cartas barajadas": cartas_barajadas}
 
