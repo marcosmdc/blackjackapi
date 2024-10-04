@@ -83,7 +83,7 @@ cartas_locales = cartas_barajadas
 
 print(cartas_barajadas)
 
-@app.get("/")
+@app.get("/api/py/jugar")
 def read_root():
     return {"Juego": "BlackJack"}
 
